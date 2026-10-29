@@ -1,0 +1,60 @@
+Geometry = GenFormat {
+    <<< "UCl3.gen"
+}
+
+Driver = GeometryOptimisation {
+Optimiser = Rational {}
+}
+
+Hamiltonian = DFTB {
+  Scc = Yes
+  SccTolerance = 1.0e-6
+  ShellResolvedSCC = Yes
+  #ReadInitialCharges = Yes
+  MaxSccIterations = 1000
+
+  Mixer = Broyden {
+        MixingParameter = 0.05
+  }
+
+  SlaterKosterFiles = Type2FileNames {
+    Prefix = "../../"
+    Separator = "-"
+    Suffix = ".skf"
+  }
+  MaxAngularMomentum {
+    U = "f"
+    Cl = "p"
+  }
+
+  Filling = Fermi {
+    Temperature [Kelvin] = 300.0
+  }
+
+  ThirdOrderFull = Yes
+  HubbardDerivs {
+    U  = -0.047897
+    Cl = -0.0697
+  }
+
+#  KPointsAndWeights = SupercellFolding {
+#       4 0 0
+#       0 4 0
+#       0 0 4
+#       0.5 0.5 0.5
+#  }
+
+#    SpinOrbit = {
+#    U = {0.0 0.24496 0.00768 0.07313}
+#    Cl = {0.0 0.00430}
+#    }
+
+}
+
+Options {
+   WriteResultsTag = Yes
+}
+
+ParserOptions {
+  ParserVersion = 14
+}
