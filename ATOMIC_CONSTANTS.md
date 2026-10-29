@@ -36,13 +36,13 @@ Hubbard derivative is one value per element.
 
 ### Spin–orbit coupling constants (optional)
 
-These were **not** used for any result in the paper. Tests on UCl6 showed a
-negligible effect on the geometry. They are given for users who want to
+These were **not** used for any result in the paper. Tests on UCl3 showed a
+non-negligible effect on the geometry. They are given for users who want to
 include SOC.
 
 | Element | ξ_p (Ha) | ξ_d (Ha) | ξ_f (Ha) |
 |---------|----------|----------|----------|
-| U       | 0.0      | 0.0077   | 0.07313  |
+| U       | 0.24496  | 0.00768  | 0.07313  |
 | Cl      | 0.00430  | —        | —        |
 
 Cite this article in case the SOC parameters are used:
